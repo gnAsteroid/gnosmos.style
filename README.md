@@ -1,9 +1,8 @@
 # gnAsteroid.style-gnosmos
 
 Default style for [gnAsteroid](https://github.com/grepsuzette/gnAsteroid).
-The server embeds it, so it's only really useful if you want to fork it.
 
-**Styles** for GNO Asteroid are just a tree:
+A **style** for an asteroid is simply a tree like:
 
 ```
 |- img/
@@ -13,11 +12,10 @@ The server embeds it, so it's only really useful if you want to fork it.
 
 # How it works
 
-You can fork this and start changing the styles for your asteroid.
+Fork this, start changing the styles for your asteroid. Then:
 
-Each asteroid can specify a different style by invoking e.g. 
-`gnAsteroid -style-dir /path/to/style -asteroid-dir ~/asteroids/foo`.
+`gnAsteroid -asteroid-dir ~/asteroids/foo -style-dir /path/to/your/style`.
 
-`-style-dir` is optional.
+# In progress
 
-
+A lot of changes are to be expected.
