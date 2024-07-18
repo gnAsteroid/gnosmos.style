@@ -2,9 +2,7 @@
  * it should only contain colors.
  */
 
-/* html[data-theme="light"] html, html[data-theme="light"] body {  background-color: #80cfff; } */
-/* html[data-theme="light"] html, html[data-theme="light"] body {  background-color: #5e8faccc; } */
-html[data-theme="light"] html, html[data-theme="light"] body {  background-color: #5e8; }
+html[data-theme="light"] html, html[data-theme="light"] body {  background-color: #70b5f3; }
 html[data-theme="light"] html, html[data-theme="light"] body, html[data-theme="light"] input { color: #000; }
 html[data-theme="light"] body img#github32 { background-image:url(/static/img/github-inverted-mark-32px.png); width: 32px; height: 32px; content:url(/static/img/github-inverted-mark-32px.png) }
 html[data-theme="light"] a.logonav { color: #b8b8b8; }
