@@ -40,8 +40,6 @@ html[data-theme="dark"] input[type=button], html[data-theme="dark"] input[type=s
   color: black;
   cursor: pointer;
 }
-html[data-theme="dark"] blockquote { background-color: #404040; }
-html[data-theme="dark"] blockquote blockquote { background-color: #555555; }
 
 html[data-theme="dark"] div#header + div {
   background-color: rgb(50, 48, 48);
@@ -72,11 +70,8 @@ html[data-theme="dark"] #realm_help .func_spec > table > tbody > tr > th { color
 /* ```<code>``` */
 html[data-theme="dark"] pre > code {
   background-color: #252545;
-  display: block;
   color: #858ed7;
-  padding: 2em;
   text-shadow: black 1px 1px;
-  line-height: 1.5em;
 }
 
 html[data-theme="dark"] pre { background-color: #252545; }
