@@ -52,7 +52,6 @@ pre > code {
 }
 
 blockquote {
-  border-left: 5px solid #0001; /*TODO no color here */
   margin: 1em 10px;
   padding: 0 10px;
 }

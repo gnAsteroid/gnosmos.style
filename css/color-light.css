@@ -7,7 +7,6 @@ background-color: #7da1da;
 background-color: #5e63b7;
 }
 html[data-theme="light"] html, html[data-theme="light"] body, html[data-theme="light"] input { color: #000; }
-/* html[data-theme="light"] body img#github32 { background-image:url(/static/img/github-inverted-mark-32px.png); width: 32px; height: 32px; content:url(/static/img/github-inverted-mark-32px.png) } */
 html[data-theme="light"] a.logonav { color: #b8b8b8; }
 html[data-theme="light"] a.logonav:hover { background-color: #0093ff70; color: #f19c9c; }
 html[data-theme="light"] a, html[data-theme="light"] #logo { 
@@ -23,6 +22,9 @@ html[data-theme="light"] a:hover {
 html[data-theme="light"] a[href^="http"]:after {
     content: " " url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVklEQVR4Xn3PgQkAMQhDUXfqTu7kTtkpd5RA8AInfArtQ2iRXFWT2QedAfttj2FsPIOE1eCOlEuoWWjgzYaB/IkeGOrxXhqB+uA9Bfcm0lAZuh+YIeAD+cAqSz4kCMUAAAAASUVORK5CYII=);
 }
+
+html[data-theme="light"] blockquote { border-left: 5px solid #0001; }
+
 html[data-theme="light"] #header_buttons a[href^="http"]:after {
      content: none;
 }
