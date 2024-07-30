@@ -10,7 +10,7 @@
 }
 
 /* this is the main stylesheet.
- * try not to put colors inside.
+ * Don't put colors inside.
  * (see color-*.css for day/night and hljs.css for code highlighting)
  */
 
@@ -18,11 +18,10 @@
   height: 32px;
   width: 32px;
   display: inline-block;
+  opacity: .9;
 }
 
-html[data-theme="dark"] #header img {
-  filter: invert(1);
-}
+/* html[data-theme="dark"] #header img { filter: invert(1); } */
 
 html[data-theme="dark"] #theme-toggle-moon,
 html[data-theme="light"] #theme-toggle-sun {
@@ -42,30 +41,42 @@ body {
 	font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif; font-weight: normal;
 }
 
+ul { padding-left: 1.618em; }
 
-blockquote blockquote {
-  margin: 0;
-}
-
-pre {
-  margin: 0;
-}
+blockquote blockquote { margin: 0; }
+pre { margin: 0; }
 
 code {
   border-radius: 3px;
-  /* padding: 5px 5px 0 5px; */
   font-size: 1.04em;
   font-size: 0.87em;
   overflow: auto;
 }
 
-pre > code {
-  font-size: 0.9em;
+/* TODO rename to img#github */
+html body img#github32 { 
+  width: 28px; 
+  height: 28px; 
+  content:url(/static/img/github-mark-white.svg);
+  opacity: 91%;
+  padding-bottom: 2px;
+  margin-right: 1px;
+}
+html body img#github32:hover { 
+  opacity: 80%;
 }
 
-/*** PAGE LAYOUT ***/
+#package_file pre > code {
+  font-size: 1.02em;
+  line-height: 1.24em;
+  padding: 1em;
+}
 
-#root { margin: 20px; }
+#root { 
+  margin: 20px; 
+  /* note: Interesting is max-width: 800px for mini-asteroids */
+  /* max-width: 800px; */
+}
 
 #header {
   padding: 22px;
@@ -81,18 +92,18 @@ pre > code {
 
 div#header + div {
   margin-top: 0px;
-  padding-top: 0.5em;
   border-bottom-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
 }
 
+/* div#package_file, */
 div#home,
 div#packge_dir,
-div#package_file,
 div#realm_help,
 div#realm_render { 
-  padding: 0 15px 15px 15px;
+  padding: 1px 15px 15px 15px;
 }
+
 
 div#home table { 
   border-collapse: collapse; 
@@ -129,6 +140,8 @@ a { text-decoration: none; }
 }
 #logo_path a:hover { text-decoration: underline; }
 
+a.logonav:hover { border-radius: 1.5px; }
+
 #realm_links { position: relative; padding-left: 0.25em; }
 #realm_links a:hover { text-decoration: underline; }
 
@@ -141,6 +154,7 @@ html #realm_help .func_spec .shell_command {
   /* font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; */
   font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
   font-weight: normal;
+  font-size: 0.9em;
 }
 
 #realm_help .func_spec > table > tbody > tr > th {
@@ -149,21 +163,56 @@ html #realm_help .func_spec .shell_command {
   text-align: right;
 }
 
-#realm_help .func_spec > table th,
-#realm_help .func_spec > table td {
-  padding-bottom: 16px;
-}
-
-#realm_help .func_spec > table th + td {
-  padding-left: 50px;
-}
-
-#realm_help .func_spec > table th + td table td {
-  padding-left: 12px;
+#realm_help div.func_spec > table {
+/*   background: rgba(255,0,64,10%); */
+  border-collapse: collapse;
 }
 
 #realm_help .func_name td {
   font-weight: bold;
 }
 
+/* the weird case of table within table */
+#realm_help div.func_spec > table table th, #realm_help div.func_spec > table table { margin: 0; }
+#realm_help div.func_spec > table table th, #realm_help div.func_spec > table table td { padding-left: 0; padding-top: 0; padding-bottom: 0; }
+#realm_help div.func_spec > table table th, #realm_help div.func_spec > table table td { border: none; }
+
+/* #realm_help div.func_spec > table th, #realm_help div.func_spec > table td { */
+/*   padding: 10px; */
+/* } */
+
 h1 { font-size: 1.618em; line-height: 1.25em; }
+
+
+/* small screen (responsive changes) */
+@media (max-width: 585px), (max-height: 320px) {
+  #root { margin:0; }
+  #header {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  div#header + div {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  /* fullscreen #home when small screen */
+  div#root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  div#home { 
+    flex-grow: 1; 
+  }
+}
+
+/** 
+ * Hide header buttons but try to keep them 
+ * on most phones for toggling theme.
+ * iPhone 11 is 375x812
+ * Galaxy S10 is 360x760
+ */
+@media (max-width: /* 359px */ 15em) {
+  /* #header_buttons { visibility: hidden; } */
+  #header_buttons { display: none; }
+}
