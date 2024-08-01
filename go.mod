@@ -1,3 +1,3 @@
-module github.com/grepsuzette/gnAsteroid.style-gnosmos
+module github.com/grepsuzette/gnosmos.style
 
 go 1.22.3

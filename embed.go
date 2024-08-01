@@ -1,4 +1,4 @@
-package main
+package gnosmos
 
 import "embed"
 
