@@ -2,5 +2,5 @@ package gnosmos
 
 import "embed"
 
-//go:embed css style img
+//go:embed css font img
 var Style embed.FS
