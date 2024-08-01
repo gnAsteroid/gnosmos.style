@@ -2,17 +2,17 @@
  * it should only contain colors.
  */
 
-html[data-theme="dark"] html, html[data-theme="dark"] body { background-color: #423d3d; }
+html[data-theme="dark"] html, html[data-theme="dark"] body { background-color: #423d3d !important; }
 html[data-theme="dark"] body, html[data-theme="dark"] body, html[data-theme="dark"] input { color: #eee; }
 html[data-theme="dark"] a { color: #8d7dff; }
 html[data-theme="dark"] a.logonav:hover { background-color: #6e4df5; color: #68ff53; }
 html[data-theme="dark"] a, html[data-theme="dark"] #logo { color: #8364ff; }
 html[data-theme="dark"] a#logo { color: grey; }
 html[data-theme="dark"] a:hover { color: #ccc; }
+* { scrollbar-color: #404244 #1e1f20; }
 
 /* shows external links à la Wikipedia: */
 html[data-theme="dark"] a[href^="http"]:after {
-     /* content: " " url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVklEQVR4Xn3PgQkAMQhDUXfqTu7kTtkpd5RA8AInfArtQ2iRXFWT2QedAfttj2FsPIOE1eCOlEuoWWjgzYaB/IkeGOrxXhqB+uA9Bfcm0lAZuh+YIeAD+cAqSz4kCMUAAAAASUVORK5CYII=); */
      content: " " url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIpJREFUeNqEkIEJwCAMBGPpEs7hHK6hY+gauoZr6Bo6RtqEWkxb6EMQnuM/USEirIoxSmOKwDkhBEwp4VPkb4801Xun9xW4e+9FldYarLUvkBPPOp4JGWOgtSaSt6VWQKUU9nPOEiSIgAmNMdadFTjn7utqrXwh6fLvH9nXhamW5ksMnpfDnw4BBgBfunO056MmqAAAAABJRU5ErkJggg==);
 }
 
