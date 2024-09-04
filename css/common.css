@@ -48,7 +48,10 @@ pre { margin: 0; }
 pre > code {
   display: block;
   padding: 1em;
-  line-height: 1.5em;
+  font-size: 14px;
+  line-height: 1.618em;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 
 blockquote {
@@ -62,9 +65,6 @@ blockquote > p {
 }
 
 code {
-  border-radius: 3px;
-  font-size: 1.04em;
-  font-size: 0.87em;
   overflow: auto;
 }
 
@@ -89,8 +89,8 @@ html body img#github32:hover {
 
 #root { 
   margin: 20px; 
-  /* note: Interesting is max-width: 800px for mini-asteroids */
-  /* max-width: 800px; */
+  /* note: Interesting is max-width for mini-asteroids */
+  max-width: 920px;
 }
 
 #header {
@@ -124,6 +124,7 @@ div#home table {
   border-collapse: collapse; 
   box-shadow: #00000020 1px 1px 5px;
   border-radius: 5px;
+  width: 100%;
 }
 div#home table, th, td { 
   border: 1px solid #00000070; 
@@ -144,6 +145,9 @@ a { text-decoration: none; }
 #logo, .logonav {
   position: relative;
   font-size: 1.5em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 
@@ -227,7 +231,7 @@ h1 { font-size: 1.618em; line-height: 1.25em; }
  * iPhone 11 is 375x812
  * Galaxy S10 is 360x760
  */
-@media (max-width: /* 359px */ 15em) {
+@media (max-width: /* 359px */ 25em) {
   /* #header_buttons { visibility: hidden; } */
   #header_buttons { display: none; }
 }

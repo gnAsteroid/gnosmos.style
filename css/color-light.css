@@ -3,15 +3,14 @@
  */
 
 html[data-theme="light"] html, html[data-theme="light"] body {  
-background-color: #7da1da; 
-background-color: #5e63b7;
+  background-color: #7da1da; 
+  /* background-color: #7baeff; */
+  /* background-color: #4f5c65; */
 }
 html[data-theme="light"] html, html[data-theme="light"] body, html[data-theme="light"] input { color: #000; }
 html[data-theme="light"] a.logonav { color: #b8b8b8; }
 html[data-theme="light"] a.logonav:hover { background-color: #0093ff70; color: #f19c9c; }
 html[data-theme="light"] a, html[data-theme="light"] #logo { 
-  /* color: #0093ff;  /1* not legible enough *1/ */
-  /* color: #066cb7; */
   color: #0d7cce;
 }
 html[data-theme="light"] a:hover {
@@ -23,7 +22,13 @@ html[data-theme="light"] a[href^="http"]:after {
     content: " " url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVklEQVR4Xn3PgQkAMQhDUXfqTu7kTtkpd5RA8AInfArtQ2iRXFWT2QedAfttj2FsPIOE1eCOlEuoWWjgzYaB/IkeGOrxXhqB+uA9Bfcm0lAZuh+YIeAD+cAqSz4kCMUAAAAASUVORK5CYII=);
 }
 
-html[data-theme="light"] blockquote { border-left: 5px solid #0001; }
+html[data-theme="light"] blockquote { 
+  border-left: 5px solid #0001; 
+  transition: border-left-color 1s ease;
+}
+html[data-theme="light"] blockquote:hover { 
+  border-left-color: rgba(0,0,0,20%); 
+}
 
 html[data-theme="light"] #header_buttons a[href^="http"]:after {
      content: none;
@@ -43,9 +48,16 @@ html[data-theme="light"] hr {
 
 html[data-theme="light"] #root { 
   border-color: #d7d9db; 
-  /* box-shadow: rgba(43, 46, 50,55%) 1px 1px 0px 0px; */
-  box-shadow: rgb(50, 50, 50) 0.2em 0.2em 1em -1em;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  /* box-shadow: rgb(50, 50, 50) 0.2em 0.2em 1em -1em; */
+  /* box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px; */
+  /* cloudy experiment */
+  box-shadow: 
+    rgba(9, 30, 66, 0.25) 2px 2px 0px 2px, 
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 30px, 
+    rgba(9, 30, 66, 0.08) -20px 0px 0px 15px, 
+    rgba(9, 30, 66, 0.08) 50px 0px 0px 75px;
+    /* rgba(255, 255, 255, 0.18) 10px 7px 0px 5px, */ 
+    /* rgba(9, 30, 66, 0.08) -10px -7px 0px 20px, */ 
   border-radius: .5em;
 }
 html[data-theme="light"] #header { 
@@ -59,15 +71,16 @@ html[data-theme="light"] #realm_help .func_spec:nth-child(odd) { background: #d7
 html[data-theme="light"] #realm_help .func_spec .shell_command { color: #464d54; }
 html[data-theme="light"] #realm_help .func_spec > table > tbody > tr > th { color: #000; }
 
+
 /* ```<code>``` */
 html[data-theme="light"] pre > code { 
   background-color: lightgrey; 
   background-color: darkslategrey; 
-  color: lawngreen;
   color: lightblue;
-  font-size: 15px;
-  line-height: 1.618em;
-  /* text-shadow: rgba(0,0,0,0.2) 1px 1px; */
+  text-shadow: rgba(0,0,0,0.2) 1px 1px;
+  background-image: linear-gradient(30deg,#22292f,#3d4852);
+  /* background-image: linear-gradient(30deg,#2f4f4f,#4f6f6f); */
+  /* background-color: #0a5858; */
 }
 
 /* `word`: <code> tags inside <pre> that are not immediate children */

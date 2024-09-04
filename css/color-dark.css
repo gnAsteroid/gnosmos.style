@@ -9,14 +9,22 @@ html[data-theme="dark"] a.logonav:hover { background-color: #6e4df5; color: #68f
 html[data-theme="dark"] a, html[data-theme="dark"] #logo { color: #8364ff; }
 html[data-theme="dark"] a#logo { color: grey; }
 html[data-theme="dark"] a:hover { color: #ccc; }
-* { scrollbar-color: #404244 #1e1f20; }
+html[data-theme="dark"] * { scrollbar-color: #404244 #1e1f20; }
 
 /* shows external links à la Wikipedia: */
 html[data-theme="dark"] a[href^="http"]:after {
      content: " " url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIpJREFUeNqEkIEJwCAMBGPpEs7hHK6hY+gauoZr6Bo6RtqEWkxb6EMQnuM/USEirIoxSmOKwDkhBEwp4VPkb4801Xun9xW4e+9FldYarLUvkBPPOp4JGWOgtSaSt6VWQKUU9nPOEiSIgAmNMdadFTjn7utqrXwh6fLvH9nXhamW5ksMnpfDnw4BBgBfunO056MmqAAAAABJRU5ErkJggg==);
 }
 
-html[data-theme="dark"] blockquote { border-left: 5px solid #ffffff12; }
+html[data-theme="dark"] blockquote { 
+  border-left: 5px solid #ffffff12; 
+  transition: border-left-color 0.5s ease,
+              background-color 2s ease;
+}
+html[data-theme="dark"] blockquote:hover { 
+  border-left-color: rgba(255,255,255,20%); 
+  background-color: rgba(255,255,255,10%);
+}
 
 html[data-theme="dark"] #header_buttons a[href^="http"]:after {
      content: none;
@@ -68,6 +76,26 @@ html[data-theme="dark"] #realm_help .func_spec:nth-child(odd) { background: #454
 html[data-theme="dark"] #realm_help .func_spec .shell_command { color: #b6b6b6; }
 html[data-theme="dark"] #realm_help .func_spec > table > tbody > tr > th { color: #eee; }
 
+html[data-theme="dark"] div#home table, html[data-theme="dark"] div#home th, html[data-theme="dark"] div#home td { 
+  border-color: rgba(255,255,255,12%); 
+}
+
+html[data-theme="dark"] strong, html[data-theme="dark"] b { 
+  color: gainsboro;
+}
+html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4, html[data-theme="dark"] h5, html[data-theme="dark"] h6 { 
+  /* those are nice but better work on this again in the night */
+  color: burlywood;
+  color: gold;
+  color: hotpink;
+  color: tomato;
+  color: lightslategray;
+  color: lightsalmon;
+  color: lightcoral;
+  color: rosybrown;
+  color: #8b85a5;
+  color: gainsboro;
+}
 
 /* ```<code>``` */
 html[data-theme="dark"] pre > code {
