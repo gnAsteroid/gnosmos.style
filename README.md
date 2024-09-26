@@ -1,6 +1,6 @@
 # gnAsteroid.style-gnosmos
 
-Default style for [gnAsteroid](https://github.com/grepsuzette/gnAsteroid).
+Default style for [gnAsteroid](https://github.com/gnAsteroid/gnAsteroid).
 It is integrated there as a git submodule.
 
 A **style** for an asteroid is simply a tree like:

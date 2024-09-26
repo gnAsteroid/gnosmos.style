@@ -145,6 +145,7 @@ a { text-decoration: none; }
 #logo, .logonav {
   position: relative;
   font-size: 1.5em;
+  line-height: 1.5em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
